@@ -1,0 +1,27 @@
+.header-container {
+  height: 55px;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #2bed72;
+
+  .header-logo {
+    padding-top: 10px;
+    width: 100px;
+  }
+
+  .header-navegation-container {
+    li {
+      display: inline-block;
+      margin-left: 1em;
+      svg {
+        vertical-align: top;
+      }
+      span {
+        font-size: 20px;
+        font-weight: bold;
+        color: #3f3f3f;
+      }
+    }
+  }
+}

@@ -1,31 +1,34 @@
-import { ReactComponent as PokeballIcon } from '../../assets/pokeball-wiki-icon.svg';
-import { ReactComponent as ControllerIcon } from '../../assets/controller-game-icon.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGamepad } from '@fortawesome/free-solid-svg-icons';
+import { faBook } from '@fortawesome/free-solid-svg-icons';
 
 import './header.styles.scss';
 
 const Header = () => {
   return (
-    <header className='header-container'>
-      <div className='header-logo-container'>
-        <img
-          src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png'
-          alt='pokemon-logo'
-          className='header-logo'
-        />
-      </div>
-      <nav className='header-navegation-container'>
-        <ul>
-          <li>
-            <PokeballIcon width={30} />
+    <nav className='header-container'>
+      <ul>
+        <li>
+          <img
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png'
+            alt='pokemon-logo'
+            id='header-logo'
+          />
+        </li>
+        <li>
+          <a href='asdaf'>
+            <FontAwesomeIcon icon={faBook} />
             <span className='header-navegation-text'>WIKI</span>
-          </li>
-          <li>
-            <ControllerIcon width={40} />
+          </a>
+        </li>
+        <li>
+          <a href='ads'>
+            <FontAwesomeIcon icon={faGamepad} />
             <span className='header-navegation-text'>GAME</span>
-          </li>
-        </ul>
-      </nav>
-    </header>
+          </a>
+        </li>
+      </ul>
+    </nav>
   );
 };
 

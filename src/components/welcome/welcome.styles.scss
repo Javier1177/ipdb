@@ -1,0 +1,24 @@
+.welcome-container {
+  width: 95%;
+  max-width: 900px;
+  margin: 0 auto;
+
+  .welcome-text-section {
+    text-align: center;
+
+    span {
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+
+    .welcome-title {
+      font-size: 4.5rem;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+
+  .searchbox-container {
+    margin: 0 auto;
+  }
+}

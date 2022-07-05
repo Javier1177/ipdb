@@ -4,7 +4,7 @@ import './welcome.styles.scss';
 
 const Welcome = () => {
   return (
-    <section className='welcome-container'>
+    <div className='welcome-container'>
       <div className='welcome-text-section'>
         <span>Welcome to</span>
         <h1 className='welcome-title'>Wiki Pokemon</h1>
@@ -16,7 +16,7 @@ const Welcome = () => {
         </p>
       </div>
       <SearchBox />
-    </section>
+    </div>
   );
 };
 

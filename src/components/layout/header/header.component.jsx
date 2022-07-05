@@ -23,12 +23,12 @@ const Header = () => {
             <span className='header-navegation-text'>WIKI</span>
           </div>
         </li>
-        <li>
+        {/* <li>
           <div className='header-link' onClick={useNavigation('/game')}>
             <FontAwesomeIcon icon={faGamepad} />
             <span className='header-navegation-text'>GAME</span>
           </div>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

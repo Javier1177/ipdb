@@ -10,6 +10,7 @@ const App = () => {
     <Routes>
       <Route path='/' element={<Layout />}>
         <Route index element={<Home />} />
+        <Route path='auth' element={<div>HEYHEY</div>} />
       </Route>
     </Routes>
   );

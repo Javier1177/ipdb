@@ -6,7 +6,6 @@ const Footer = () => {
   return (
     <footer className='footer-container'>
       <ul>
-        <li>WIKI &#124; GAME</li>
         <li>
           Made by <a href='https://github.com/Javier1177'>Javier López</a>
         </li>
@@ -15,6 +14,10 @@ const Footer = () => {
             <FontAwesomeIcon icon={faGithub} id='github-icon' />
             <span>Checkout out my repository in Github</span>
           </a>
+        </li>
+        <li>
+          © Pokémon &#124; © Nintendo &#124; © Game Freak &#124; © Creatures,
+          Inc
         </li>
       </ul>
     </footer>

@@ -6,10 +6,16 @@ import './searchBox.styles.scss';
 const SearchBox = () => {
   return (
     <div className='searchbox-container'>
-      <div className='searchbox-icon'>
+      <label className='searchbox-icon' for='search-pokemon'>
         <FontAwesomeIcon icon={faMagnifyingGlass} />
-      </div>
-      <input type='search' className='searchbox-input' />
+      </label>
+      <input
+        type='search'
+        className='searchbox-input'
+        id='search-pokemon'
+        spellcheck='false'
+        placeholder='Search for a pokemon...'
+      />
     </div>
   );
 };

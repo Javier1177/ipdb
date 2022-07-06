@@ -1,5 +1,5 @@
 import Welcome from '../../components/welcome/welcome.component';
-import PokemonCard from '../../components/pokemonCard/pokemonCard.component';
+import PokeSuggestion from '../../components/pokeSuggestion/pokeSuggestion.component';
 
 import './home.styles.scss';
 
@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <section className='home-container'>
       <Welcome />
-      <PokemonCard />
+      <PokeSuggestion />
     </section>
   );
 };

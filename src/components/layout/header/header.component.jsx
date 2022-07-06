@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGamepad } from '@fortawesome/free-solid-svg-icons';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
+// import { faGamepad } from '@fortawesome/free-solid-svg-icons';
 
 import { useNavigation } from '../../../helpers/hooks';
 

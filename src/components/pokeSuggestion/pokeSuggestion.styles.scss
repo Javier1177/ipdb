@@ -1,0 +1,10 @@
+.pokeSuggestion-container {
+  margin: 10px auto;
+  width: 75%;
+
+  .pokeSuggestion-cards-List {
+    display: flex;
+    gap: 1em;
+    overflow-x: scroll;
+  }
+}

@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
 // import { faGamepad } from '@fortawesome/free-solid-svg-icons';
 
-import { useNavigation } from '../../../helpers/hooks';
+import { useNavigation } from '../../../utils/hooks';
 
 import './header.styles.scss';
 

@@ -18,8 +18,8 @@ const PokeSuggestion = () => {
       <div className='pokeSuggestion-cards-List'>
         {Array(8)
           .fill('')
-          .map(e => (
-            <PokeCard {...mockedData} />
+          .map((e, index) => (
+            <PokeCard {...mockedData} key={index} />
           ))}
       </div>
     </div>

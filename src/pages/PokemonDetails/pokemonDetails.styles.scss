@@ -1,0 +1,21 @@
+.pokemonDetails-container {
+  .searchbox-container {
+    margin: 0 auto;
+  }
+  .pokemonDetails-info {
+    margin-top: 5em;
+    display: flex;
+    flex-wrap: wrap;
+
+    .pokemonDetails-image {
+      img {
+        width: 400px;
+        height: auto;
+      }
+    }
+
+    .pokemonDetails-text {
+      max-width: 50%;
+    }
+  }
+}

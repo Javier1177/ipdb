@@ -1,19 +1,65 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+
 import { fetchDetailsStart } from '../../store/details/details.slice';
+
+import SearchBox from '../../components/searchBox/searchBox.component';
+
 import './pokemonDetails.styles.scss';
+import { capitalizeString, convertQuantityFrom } from '../../utils';
 
 const PokemonDetails = () => {
   const dispatch = useDispatch();
   const { pokemon } = useParams();
   const pokemonInfo = useSelector(state => state.pokemonDetails?.details);
+  const isLoaded = useSelector(state => state.pokemonDetails?.isLoaded);
 
   useEffect(() => {
     dispatch(fetchDetailsStart(pokemon));
   }, [dispatch, pokemon]);
 
-  return <div className='details-container'>{pokemonInfo.weight}</div>;
+  return (
+    <div className='pokemonDetails-container'>
+      <SearchBox />
+      {isLoaded ? (
+        <div>Cargando muchacho</div>
+      ) : (
+        <section className='pokemonDetails-info'>
+          <div className='pokemonDetails-image'>
+            <img
+              src={pokemonInfo.sprites?.front_default}
+              alt={pokemonInfo.name}
+            />
+          </div>
+          <div className='pokemonDetails-text'>
+            <h1>{capitalizeString(pokemonInfo.name)}</h1>
+            <p className='pokemonDetails-moves'>
+              Moves:{' '}
+              {pokemonInfo.moves?.map((move, index) => {
+                if (index === pokemonInfo.moves.length - 1)
+                  return ` ${capitalizeString(move.move.name)}`;
+                return ` ${capitalizeString(move.move.name)},`;
+              })}
+            </p>
+            <div className='pokemonDetails-data'>
+              <ul>
+                <li>
+                  Height {convertQuantityFrom('dm', pokemonInfo.height)} cm
+                </li>
+                <li>
+                  Weight {convertQuantityFrom('hg', pokemonInfo.weight)} kg
+                </li>
+                <li>Abilities {pokemonInfo.name}</li>
+                <li>Types {pokemonInfo.name}</li>
+                <li>Forms {pokemonInfo.name}</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      )}
+    </div>
+  );
 };
 
 export default PokemonDetails;

@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   details: {},
-  isLoading: false,
+  isLoaded: false,
   error: null,
 };
 
@@ -11,15 +11,15 @@ export const detailsSlice = createSlice({
   initialState,
   reducers: {
     fetchDetailsStart: state => {
-      return { ...state, isLoading: true };
+      return { ...state, isLoaded: false };
     },
     fetchDetailsFailed: (state, param) => {
       const { payload } = param;
-      return { ...state, isLoading: false, error: payload };
+      return { ...state, isLoaded: true, error: payload };
     },
     fetchDetailsSuccess: (state, param) => {
       const { payload } = param;
-      return { ...state, details: payload, isLoading: false };
+      return { ...state, details: payload, isLoaded: true };
     },
   },
 });

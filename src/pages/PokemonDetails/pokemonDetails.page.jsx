@@ -23,8 +23,6 @@ const PokemonDetails = () => {
     <div className='pokemonDetails-container'>
       <SearchBox />
       {isLoaded ? (
-        <div>Cargando muchacho</div>
-      ) : (
         <section className='pokemonDetails-info'>
           <div className='pokemonDetails-image'>
             <img
@@ -57,6 +55,8 @@ const PokemonDetails = () => {
             </div>
           </div>
         </section>
+      ) : (
+        <div>Cargando muchacho</div>
       )}
     </div>
   );

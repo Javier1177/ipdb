@@ -3,17 +3,21 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
 import { fetchDetailsStart } from '../../store/details/details.slice';
+import {
+  selectPokemonDetails,
+  selectPokemonIsLoaded,
+} from '../../store/details/details.selectors';
 
 import SearchBox from '../../components/searchBox/searchBox.component';
 
-import './pokemonDetails.styles.scss';
 import { capitalizeString, convertQuantityFrom } from '../../utils';
+import './pokemonDetails.styles.scss';
 
 const PokemonDetails = () => {
   const dispatch = useDispatch();
   const { pokemon } = useParams();
-  const pokemonInfo = useSelector(state => state.pokemonDetails?.details);
-  const isLoaded = useSelector(state => state.pokemonDetails?.isLoaded);
+  const pokemonInfo = useSelector(selectPokemonDetails);
+  const isLoaded = useSelector(selectPokemonIsLoaded);
 
   useEffect(() => {
     dispatch(fetchDetailsStart(pokemon));
